@@ -1,0 +1,80 @@
+/**
+ * General elements
+ */
+html {
+    overflow-y: scroll;
+}
+body {
+    color: #333;
+    font-family: arial, sans-serif;
+}
+
+/**
+ * Layout of the main page elements
+ */
+#wrapper {
+    margin: 0 auto;
+    width: 980px;
+    padding: 10px;
+}
+
+
+/**
+ * Layout for header
+ */
+#header {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.sitetitle {
+    position: absolute;
+    top: 6px;
+    left: 130px;
+    font-size: 48px;
+}
+
+.siteslogan {
+    position: absolute;
+    top: 65px;
+    left: 130px;
+    font-style: italic;
+    color: #666;
+}
+
+
+/**
+ * Layout for main
+ */
+#main {
+    min-height: 20em;
+}
+
+
+/**
+ * Layout for footer
+ */
+#footer {
+    margin-top: 40px;
+    border-top: 1px solid #ccc;
+    padding-top: 15px;
+}
+
+.sitefooter {
+    color: #666;
+}
+.sitelogo{
+    height: 80px;
+}
+
+/* import mos standard gray navbar */
+/* @import url(http://dbwebb.se/style/?id=86&css); */
+
+#navbar {background:#FFC182;border-bottom:1px solid #7FD7F7;padding:15px;}
+
+#navbar a {color:#FFFFFF;font:bold 12px Verdana;padding:15px;text-decoration:none; transition: background 0.3s linear 0s, color 0.3s linear 0s;}
+
+#navbar a:hover {color:#FFFFFF;background:#964B00;}
+
+#navbar a#selected {	color:#FFFFFF;background:#F47A00;}
+
