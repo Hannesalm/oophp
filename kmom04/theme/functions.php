@@ -15,6 +15,3 @@ function get_title($title) {
     return $title . (isset($Orange['title_append']) ? $Orange['title_append'] : null);
 }
 
-function dump($array){
-    echo "<pre>" . htmlentities(print_r($array, 1)) . "</pre>";
-}

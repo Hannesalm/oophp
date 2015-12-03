@@ -62,7 +62,7 @@ EOD;
 
 $Orange['footer'] = <<<EOD
 <footer>
-    <span class='sitefooter'>Copyright (c) Hannes Alm (hannes@almar.se) | <a href='http://validator.w3.org/unicorn/check?ucn_uri=referer&amp;ucn_task=conformance'>Unicorn</a></span>
+    <span class='sitefooter'>Copyright (c) Hannes Alm (hannes@almar.se)</span>
     <div class='icons'>
     <a href='http://validator.w3.org/check/referer'><img title='HTML5' src='./../img/html5Flat.png' alt='HTML5'/></a>
     <a href='http://jigsaw.w3.org/css-validator/check/referer'><img title='CSS3'src='./../img/cssFlat.png' alt='CSS'/></a>
@@ -80,3 +80,22 @@ EOD;
 //$Orange['stylesheet'] = 'css/style.css';
 $Orange['stylesheets'] = array('css/style.css');
 $Orange['favicon']    = './../img/orangeFavicon.png';
+
+// Connect to database
+
+if($_SERVER['SERVER_NAME'] == 'localhost:8080') {
+    $Orange['database']['dsn']                 = 'mysql:host=127.0.0.1;port=3306;dbname=movie';
+    $Orange['database']['username']            = 'root';
+    $Orange['database']['password']            = 'abc123';
+    $Orange['database']['driver_options']      = array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'UTF8'");
+} else if($_SERVER['SERVER_NAME'] == 'www.student.bth.se') {
+    define('DB_PASSWORD', 'Ppt8ue!!'); // The database password
+    define('DB_USER', 'haam15');
+    $Orange['database']['dsn']                   = 'mysql:host=blu-ray.student.bth.se;dbname=guel12';
+    $Orange['database']['username']              = DB_USER;
+    $Orange['database']['password']              = DB_PASSWORD;
+    $Orange['database']['driver_options']        = array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'UTF8'");
+}
+if($_SERVER['SERVER_NAME'] == 'localhost:8080' || $_SERVER['SERVER_NAME'] == 'www.student.bth.se') {
+    $db = new CDatabase($Orange['database']);
+}
