@@ -1,0 +1,140 @@
+/**
+ * General elements
+ */
+html {
+    overflow-y: scroll;
+}
+body {
+    color: #333;
+    font-family: arial, sans-serif;
+}
+
+/**
+ * Layout of the main page elements
+ */
+#wrapper {
+    margin: 0 auto;
+    width: 980px;
+    padding: 10px;
+}
+
+
+/**
+ * Layout for header
+ */
+#header {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.sitetitle {
+    position: absolute;
+    top: 6px;
+    left: 130px;
+    font-size: 48px;
+}
+
+.siteslogan {
+    position: absolute;
+    top: 65px;
+    left: 130px;
+    font-style: italic;
+    color: #666;
+}
+
+
+/**
+ * Layout for main
+ */
+#main {
+    min-height: 20em;
+}
+
+
+/**
+ * Layout for footer
+ */
+#footer {
+    margin-top: 40px;
+    border-top: 1px solid #ccc;
+    padding-top: 15px;
+}
+
+.sitefooter {
+    color: #666;
+    clear: both;
+}
+.sitelogo{
+    height: 80px;
+}
+
+/* import mos standard gray navbar */
+/* @import url(http://dbwebb.se/style/?id=86&css); */
+
+#navbar {
+    background:#F6A400;
+    padding:15px;
+}
+#navbar a {
+    color:#FFFFFF;
+    font:bold 12px Verdana;
+    padding:15px;
+    text-decoration:none;
+    transition: background 0.3s linear 0s, color 0.3s linear 0s;
+}
+#navbar a:hover {
+    color:#FFFFFF;
+    background:#964B00;
+}
+#navbar a#selected {
+    color:#FFFFFF;background:#F47A00;
+}
+.iconsSocial{
+    padding-right: 5px;
+    float: right;
+    margin-top: 1px;
+}
+.iconsSocial img{
+    height: 51px;
+    width: 51px;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+}
+.iconsSocial img:hover{
+    filter: grayscale(0);
+    -webkit-filter: grayscale(0);
+}
+.icons{
+    float: right;
+}
+.icons img{
+    height: 51px;
+    width: 51px;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+ }
+.icons img:hover{
+    filter: grayscale(0);
+    -webkit-filter: grayscale(0);
+}
+.leftArrow img{
+    float: left;
+    position: relative;
+    width: 80px;
+    height: 50px;
+}
+.rightArrow img{
+    float: right;
+    position: relative;
+    width: 80px;
+    height: 50px;
+    -moz-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+    transform: scale(-1, 1);
+
+}
+.calendar{
+    position: relative;
+}

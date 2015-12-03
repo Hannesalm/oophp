@@ -1,0 +1,126 @@
+table {
+    border-spacing: 0;
+    width: 980px;
+}
+
+.bordered {
+    border: solid #ccc 1px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 1px 1px #ccc;
+    -moz-box-shadow: 0 1px 1px #ccc;
+    box-shadow: 0 1px 1px #ccc;
+}
+
+.bordered td:hover {
+    background: #ffd9b3;
+    -o-transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+}
+
+.bordered td, .bordered th {
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+
+    text-align: left;
+}
+.bordered td{
+    width: 100px;
+    height: 100px;
+}
+
+
+
+.bordered td:first-child, .bordered th:first-child {
+    border-left: none;
+}
+.styled-select {
+    float: right;
+    width: 240px;
+    height: 34px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background: url(http://cdn.bavotasan.com/wp-content/uploads/2011/05/down_arrow_select.jpg) no-repeat right #ddd;
+}
+.styled-select select {
+    background: transparent;
+    width: 268px;
+    padding: 5px;
+    font-size: 16px;
+    line-height: 1;
+    border: 0;
+    border-radius: 0;
+    height: 34px;
+}
+.monthNumber{
+    text-align: center;
+    font-size: 58px;
+}
+.monthName{
+    text-align: center;
+}
+.redNumber{
+    text-align: center;
+    font-size: 58px;
+    color: red;
+}
+.redName{
+    text-align: center;
+    color: red;
+}
+.current{
+    width: 100%;
+    height: 100%;
+    background-color: #FFCC66;
+}
+.img{
+    height: 280px;
+    width: 980px;
+    position: relative;
+    bottom: 10px;
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+}
+.leftArrow img{
+    float: left;
+    position: relative;
+    width: 80px;
+    height: 50px;
+}
+.rightArrow img{
+    float: right;
+    position: relative;
+    width: 80px;
+    height: 50px;
+    -moz-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+    transform: scale(-1, 1);
+
+}
+.year{
+    position: relative;
+    font-size: 100px;
+    left: 375px;
+    bottom: 377px;
+}
+.month{
+    position: relative;
+    font-size: 100px;
+    left: 275px;
+    bottom: 480px;
+}
+.headerCalendar{
+    height: 300px;
+}
+.christmas{
+    width: 100%;
+    height: 100%;
+    background-image: url(./../img/calender/christmas.jpg);
+    background-size: cover;
+}
