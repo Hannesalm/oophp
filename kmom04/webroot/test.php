@@ -1,6 +1,10 @@
 <?php
-
-include 'config.php';
+/**
+ * This is a Orange pagecontroller.
+ *
+ */
+// Include the essential config-file which also creates the $Orange variable with its defaults.
+include(__DIR__.'/config.php');
 
 $Orange['title'] = "Test";
 
@@ -23,23 +27,38 @@ Frågod och svar
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+$dsn      = 'mysql:host=localhost:8080;dbname=Movie;';
+$login    = 'root';
+$password = '123abc';
+$options  = array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'UTF8'");
+$pdo = new PDO($dsn, $login, $password, $options);
 
 */
+
+// Do SELECT from a table
+
+
+
+
+include(Orange_THEME_PATH);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 include(Orange_THEME_PATH);

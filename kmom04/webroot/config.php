@@ -45,14 +45,17 @@ $Orange = array();
 $Orange['lang']         = 'sv';
 $Orange['title_append'] = ' | Orange min webbtemplate';
 
+
 $menu = array(
     'startsida'  => array('text'=>'Startsida',  'url'=>'me.php'),
     'redovisning'  => array('text'=>'Redovisning',  'url'=>'redovisning.php'),
     'kallkod' => array('text'=>'Källkod', 'url'=>'scource.php'),
-    'calender' => array('text'=>'Kalender', 'url'=>'calender.php')
+    'calender' => array('text'=>'Kalender', 'url'=>'calender.php'),
+    'movie' => array('text'=>'Movie', 'url'=>'movie.php')
+
 );
 
-$Orange['navbar'] = cNavigation::GenerateMenu($menu);
+$Orange['navbar'] = CNavigation::generateMenu($menu);
 
 $Orange['header'] = <<<EOD
 <img class='sitelogo' src='./../img/orangeLogo.png' alt='Orange Logo'/>
@@ -83,19 +86,19 @@ $Orange['favicon']    = './../img/orangeFavicon.png';
 
 // Connect to database
 
-if($_SERVER['SERVER_NAME'] == 'localhost:8080') {
+if($_SERVER['SERVER_NAME'] == 'localhost') {
     $Orange['database']['dsn']                 = 'mysql:host=127.0.0.1;port=3306;dbname=movie';
     $Orange['database']['username']            = 'root';
-    $Orange['database']['password']            = 'abc123';
+    $Orange['database']['password']            = '';
     $Orange['database']['driver_options']      = array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'UTF8'");
 } else if($_SERVER['SERVER_NAME'] == 'www.student.bth.se') {
     define('DB_PASSWORD', 'Ppt8ue!!'); // The database password
     define('DB_USER', 'haam15');
-    $Orange['database']['dsn']                   = 'mysql:host=blu-ray.student.bth.se;dbname=guel12';
+    $Orange['database']['dsn']                   = 'mysql:host=blu-ray.student.bth.se;dbname=haam15';
     $Orange['database']['username']              = DB_USER;
     $Orange['database']['password']              = DB_PASSWORD;
     $Orange['database']['driver_options']        = array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'UTF8'");
 }
-if($_SERVER['SERVER_NAME'] == 'localhost:8080' || $_SERVER['SERVER_NAME'] == 'www.student.bth.se') {
+if($_SERVER['SERVER_NAME'] == 'localhost' || $_SERVER['SERVER_NAME'] == 'www.student.bth.se') {
     $db = new CDatabase($Orange['database']);
 }

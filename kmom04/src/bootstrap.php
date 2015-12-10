@@ -19,18 +19,22 @@ set_exception_handler('myExceptionHandler');
  *
  */
 function myAutoloader($class) {
-    $path1 = Orange_INSTALL_PATH . "/src/CSource/{$class}.php";
-    $path2 = Orange_INSTALL_PATH . "/src/CCalender/{$class}.php";
-    $path3 = Orange_INSTALL_PATH . "/src/CDatabase/{$class}.php";
+    $path1 = Orange_INSTALL_PATH . "/src/{$class}/{$class}.php";
+    $path2 = Orange_INSTALL_PATH . "/src/CSource/{$class}.php";
+    $path3 = Orange_INSTALL_PATH . "/src/CCalender/{$class}.php";
+    $path4 = Orange_INSTALL_PATH . "/src/CDatabase/{$class}.php";
 
     if(is_file($path1)) {
         include($path1);
     }
-    elseif(is_file($path2)) {
+    else if(is_file($path2)) {
         include($path2);
     }
     elseif(is_file($path3)) {
         include($path3);
+    }
+    elseif(is_file($path4)) {
+        include($path4);
     }
     else {
         throw new Exception("Classfile '{$path1},{$path2}' does not exists.");

@@ -1,5 +1,6 @@
 <?php
 
+
 class CNavigation
 {
     public static function GenerateMenu($items) {
